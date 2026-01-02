@@ -15,7 +15,7 @@ import {
 import type { SimulationParams, AggregateResults } from './types';
 import { DEFAULT_PARAMS } from './types';
 import type { SimulationResult } from './simulation';
-import { useSensitivityAnalysis } from './useSensitivityAnalysis';
+import type { SensitivityResult } from './useSensitivityAnalysis';
 import { SensitivityPanel } from './SensitivityPanel';
 import SimulationWorker from './simulation.worker?worker';
 import './App.css';
@@ -86,14 +86,12 @@ function App() {
   const [params, setParams] = useState<SimulationParams>(DEFAULT_PARAMS);
   const [results, setResults] = useState<AggregateResults | null>(null);
   const [singleResult, setSingleResult] = useState<SimulationResult | null>(null);
+  const [sensitivity, setSensitivity] = useState<SensitivityResult | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [showSingleRun, setShowSingleRun] = useState(false);
   const [selectedParam, setSelectedParam] = useState<keyof SimulationParams | null>(null);
 
   const workerRef = useRef<Worker | null>(null);
-  const pendingParamsRef = useRef<SimulationParams | null>(null);
-
-  const sensitivity = useSensitivityAnalysis(params, selectedParam);
 
   const updateParam = useCallback(
     <K extends keyof SimulationParams>(key: K, value: SimulationParams[K]) => {
@@ -102,48 +100,44 @@ function App() {
     []
   );
 
-  // Initialize worker
-  useEffect(() => {
-    const worker = new SimulationWorker();
-    workerRef.current = worker;
-
-    worker.onmessage = (e) => {
-      const { type, results: newResults, singleResult: newSingle } = e.data;
-      if (type === 'results') {
-        setResults(newResults);
-        setSingleResult(newSingle);
-        setIsRunning(false);
-
-        // If there are pending params, run those next
-        if (pendingParamsRef.current) {
-          const nextParams = pendingParamsRef.current;
-          pendingParamsRef.current = null;
-          setIsRunning(true);
-          worker.postMessage({ type: 'run', params: nextParams });
-        }
-      }
-    };
-
-    return () => {
-      worker.terminate();
-    };
-  }, []);
-
-  // Run simulation when params change (debounced)
+  // Run simulation when params or selectedParam change
+  // Cancel any in-progress work by terminating and recreating the worker
   useEffect(() => {
     const timer = setTimeout(() => {
+      // Terminate existing worker to cancel in-progress work
       if (workerRef.current) {
-        if (isRunning) {
-          // Queue this run for after current one finishes
-          pendingParamsRef.current = params;
-        } else {
-          setIsRunning(true);
-          workerRef.current.postMessage({ type: 'run', params });
-        }
+        workerRef.current.terminate();
       }
+
+      // Create new worker
+      const worker = new SimulationWorker();
+      workerRef.current = worker;
+
+      worker.onmessage = (e) => {
+        const { type, results: newResults, singleResult: newSingle, sensitivity: newSensitivity } = e.data;
+        if (type === 'results') {
+          setResults(newResults);
+          setSingleResult(newSingle);
+          setSensitivity(newSensitivity);
+          setIsRunning(false);
+        }
+      };
+
+      setIsRunning(true);
+      worker.postMessage({ type: 'run', params, selectedParam });
     }, 150);
+
     return () => clearTimeout(timer);
-  }, [params]);
+  }, [params, selectedParam]);
+
+  // Cleanup worker on unmount
+  useEffect(() => {
+    return () => {
+      if (workerRef.current) {
+        workerRef.current.terminate();
+      }
+    };
+  }, []);
 
   // Prepare chart data
   const fundChartData = useMemo(() => {
