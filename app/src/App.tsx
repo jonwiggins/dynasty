@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import {
   Line,
   XAxis,
@@ -14,10 +14,10 @@ import {
 } from 'recharts';
 import type { SimulationParams, AggregateResults } from './types';
 import { DEFAULT_PARAMS } from './types';
-import { runMultipleSimulations, runSingleSimulation } from './simulation';
 import type { SimulationResult } from './simulation';
 import { useSensitivityAnalysis } from './useSensitivityAnalysis';
 import { SensitivityPanel } from './SensitivityPanel';
+import SimulationWorker from './simulation.worker?worker';
 import './App.css';
 
 function formatCurrency(value: number): string {
@@ -90,6 +90,9 @@ function App() {
   const [showSingleRun, setShowSingleRun] = useState(false);
   const [selectedParam, setSelectedParam] = useState<keyof SimulationParams | null>(null);
 
+  const workerRef = useRef<Worker | null>(null);
+  const pendingParamsRef = useRef<SimulationParams | null>(null);
+
   const sensitivity = useSensitivityAnalysis(params, selectedParam);
 
   const updateParam = useCallback(
@@ -99,16 +102,46 @@ function App() {
     []
   );
 
-  // Auto-run simulation when params change
+  // Initialize worker
   useEffect(() => {
-    setIsRunning(true);
+    const worker = new SimulationWorker();
+    workerRef.current = worker;
+
+    worker.onmessage = (e) => {
+      const { type, results: newResults, singleResult: newSingle } = e.data;
+      if (type === 'results') {
+        setResults(newResults);
+        setSingleResult(newSingle);
+        setIsRunning(false);
+
+        // If there are pending params, run those next
+        if (pendingParamsRef.current) {
+          const nextParams = pendingParamsRef.current;
+          pendingParamsRef.current = null;
+          setIsRunning(true);
+          worker.postMessage({ type: 'run', params: nextParams });
+        }
+      }
+    };
+
+    return () => {
+      worker.terminate();
+    };
+  }, []);
+
+  // Run simulation when params change (debounced)
+  useEffect(() => {
     const timer = setTimeout(() => {
-      const newResults = runMultipleSimulations(params);
-      setResults(newResults);
-      const single = runSingleSimulation(params, true); // debug mode
-      setSingleResult(single);
-      setIsRunning(false);
-    }, 100);
+      if (workerRef.current) {
+        if (isRunning) {
+          // Queue this run for after current one finishes
+          pendingParamsRef.current = params;
+        } else {
+          setIsRunning(true);
+          workerRef.current.postMessage({ type: 'run', params });
+        }
+      }
+    }, 150);
     return () => clearTimeout(timer);
   }, [params]);
 
@@ -369,7 +402,13 @@ function App() {
                 </div>
               </div>
 
-              <div className="chart-container">
+              <div className={`chart-container ${isRunning ? 'loading' : ''}`}>
+                {isRunning && (
+                  <div className="chart-loading-indicator">
+                    <div className="spinner"></div>
+                    <span>Updating...</span>
+                  </div>
+                )}
                 <h3>Fund Balance Over Time (Percentiles)</h3>
                 <ResponsiveContainer width="100%" height={350}>
                   <AreaChart data={fundChartData}>
@@ -433,7 +472,7 @@ function App() {
 
               {showSingleRun && singleResult && (
                 <>
-                  <div className="chart-container">
+                  <div className={`chart-container ${isRunning ? 'loading' : ''}`}>
                     <h3>Single Run: Fund Balance & Beneficiaries</h3>
                     <ResponsiveContainer width="100%" height={350}>
                       <ComposedChart data={singleRunChartData}>
@@ -479,7 +518,7 @@ function App() {
                     </ResponsiveContainer>
                   </div>
 
-                  <div className="chart-container">
+                  <div className={`chart-container ${isRunning ? 'loading' : ''}`}>
                     <h3>Single Run: Births & Deaths</h3>
                     <ResponsiveContainer width="100%" height={250}>
                       <ComposedChart data={singleRunChartData}>
