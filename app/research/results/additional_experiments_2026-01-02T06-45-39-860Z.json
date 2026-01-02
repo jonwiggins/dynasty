@@ -1,0 +1,649 @@
+{
+  "largeFunds": [
+    {
+      "name": "fund_10M",
+      "params": {
+        "initialFund": 10000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.88,
+      "medianRuinYear": 2125,
+      "avgFinalFund": 4751648964638.604
+    },
+    {
+      "name": "fund_12M",
+      "params": {
+        "initialFund": 12000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.89,
+      "medianRuinYear": 2131,
+      "avgFinalFund": 17226690062789.096
+    },
+    {
+      "name": "fund_15M",
+      "params": {
+        "initialFund": 15000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.915,
+      "medianRuinYear": 2146,
+      "avgFinalFund": 9317136784783.764
+    },
+    {
+      "name": "fund_20M",
+      "params": {
+        "initialFund": 20000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.95,
+      "medianRuinYear": 2146,
+      "avgFinalFund": 7576095365941.905
+    },
+    {
+      "name": "fund_25M",
+      "params": {
+        "initialFund": 25000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.98,
+      "medianRuinYear": 2130,
+      "avgFinalFund": 22476347672567.14
+    },
+    {
+      "name": "fund_30M",
+      "params": {
+        "initialFund": 30000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.985,
+      "medianRuinYear": 2181,
+      "avgFinalFund": 14581899768523.523
+    }
+  ],
+  "volReturnMatrix": [
+    {
+      "name": "vol0.1_ret0.06",
+      "params": {
+        "returnVolatility": 0.1,
+        "realReturnRate": 0.06,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.71,
+      "medianRuinYear": 2111,
+      "avgFinalFund": 427050066221.9263
+    },
+    {
+      "name": "vol0.1_ret0.07",
+      "params": {
+        "returnVolatility": 0.1,
+        "realReturnRate": 0.07,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.955,
+      "medianRuinYear": 2103,
+      "avgFinalFund": 3666358110847.817
+    },
+    {
+      "name": "vol0.1_ret0.08",
+      "params": {
+        "returnVolatility": 0.1,
+        "realReturnRate": 0.08,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 20336978170101.68
+    },
+    {
+      "name": "vol0.1_ret0.09",
+      "params": {
+        "returnVolatility": 0.1,
+        "realReturnRate": 0.09,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 149168155038377.56
+    },
+    {
+      "name": "vol0.1_ret0.1",
+      "params": {
+        "returnVolatility": 0.1,
+        "realReturnRate": 0.1,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 674334205893413.5
+    },
+    {
+      "name": "vol0.1_ret0.12",
+      "params": {
+        "returnVolatility": 0.1,
+        "realReturnRate": 0.12,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 28377806558411736
+    },
+    {
+      "name": "vol0.15_ret0.06",
+      "params": {
+        "returnVolatility": 0.15,
+        "realReturnRate": 0.06,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.42,
+      "medianRuinYear": 2101,
+      "avgFinalFund": 729784114231.9825
+    },
+    {
+      "name": "vol0.15_ret0.07",
+      "params": {
+        "returnVolatility": 0.15,
+        "realReturnRate": 0.07,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.65,
+      "medianRuinYear": 2112,
+      "avgFinalFund": 4435966808086.604
+    },
+    {
+      "name": "vol0.15_ret0.08",
+      "params": {
+        "returnVolatility": 0.15,
+        "realReturnRate": 0.08,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.86,
+      "medianRuinYear": 2104,
+      "avgFinalFund": 19850489472630.984
+    },
+    {
+      "name": "vol0.15_ret0.09",
+      "params": {
+        "returnVolatility": 0.15,
+        "realReturnRate": 0.09,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.96,
+      "medianRuinYear": 2161,
+      "avgFinalFund": 188946985384141.16
+    },
+    {
+      "name": "vol0.15_ret0.1",
+      "params": {
+        "returnVolatility": 0.15,
+        "realReturnRate": 0.1,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.995,
+      "medianRuinYear": 2077,
+      "avgFinalFund": 699239492435128.5
+    },
+    {
+      "name": "vol0.15_ret0.12",
+      "params": {
+        "returnVolatility": 0.15,
+        "realReturnRate": 0.12,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 36716737862040790
+    },
+    {
+      "name": "vol0.2_ret0.06",
+      "params": {
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.06,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.255,
+      "medianRuinYear": 2086,
+      "avgFinalFund": 2046998318434.19
+    },
+    {
+      "name": "vol0.2_ret0.07",
+      "params": {
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.07,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.38,
+      "medianRuinYear": 2092,
+      "avgFinalFund": 2325395654206.6533
+    },
+    {
+      "name": "vol0.2_ret0.08",
+      "params": {
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.08,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.63,
+      "medianRuinYear": 2087,
+      "avgFinalFund": 8143383046374.196
+    },
+    {
+      "name": "vol0.2_ret0.09",
+      "params": {
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.09,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.76,
+      "medianRuinYear": 2100,
+      "avgFinalFund": 80986642718668.6
+    },
+    {
+      "name": "vol0.2_ret0.1",
+      "params": {
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.1,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.885,
+      "medianRuinYear": 2084,
+      "avgFinalFund": 940133069773770.2
+    },
+    {
+      "name": "vol0.2_ret0.12",
+      "params": {
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.12,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.99,
+      "medianRuinYear": 2136,
+      "avgFinalFund": 24933831451599016
+    },
+    {
+      "name": "vol0.25_ret0.06",
+      "params": {
+        "returnVolatility": 0.25,
+        "realReturnRate": 0.06,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.09,
+      "medianRuinYear": 2074,
+      "avgFinalFund": 758910459654.7184
+    },
+    {
+      "name": "vol0.25_ret0.07",
+      "params": {
+        "returnVolatility": 0.25,
+        "realReturnRate": 0.07,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.21,
+      "medianRuinYear": 2085,
+      "avgFinalFund": 575535486909.4229
+    },
+    {
+      "name": "vol0.25_ret0.08",
+      "params": {
+        "returnVolatility": 0.25,
+        "realReturnRate": 0.08,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.415,
+      "medianRuinYear": 2080,
+      "avgFinalFund": 9202837033555.844
+    },
+    {
+      "name": "vol0.25_ret0.09",
+      "params": {
+        "returnVolatility": 0.25,
+        "realReturnRate": 0.09,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.545,
+      "medianRuinYear": 2085,
+      "avgFinalFund": 82877842421195.2
+    },
+    {
+      "name": "vol0.25_ret0.1",
+      "params": {
+        "returnVolatility": 0.25,
+        "realReturnRate": 0.1,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.69,
+      "medianRuinYear": 2080,
+      "avgFinalFund": 303444211180103.6
+    },
+    {
+      "name": "vol0.25_ret0.12",
+      "params": {
+        "returnVolatility": 0.25,
+        "realReturnRate": 0.12,
+        "initialFund": 5000000,
+        "totalFertilityRate": 2
+      },
+      "successRate": 0.92,
+      "medianRuinYear": 2071,
+      "avgFinalFund": 26167711698480204
+    }
+  ],
+  "optimalScenarios": [
+    {
+      "name": "Baseline ($5M, TFR 2.0, 7% return, 15% vol)",
+      "params": {
+        "initialFund": 5000000,
+        "totalFertilityRate": 2,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.15
+      },
+      "successRate": 0.705,
+      "medianRuinYear": 2102,
+      "avgFinalFund": 4577235499636.373
+    },
+    {
+      "name": "Low Volatility Focus ($5M, 7% return, 10% vol)",
+      "params": {
+        "initialFund": 5000000,
+        "totalFertilityRate": 2,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.895,
+      "medianRuinYear": 2119,
+      "avgFinalFund": 3319507132510.8535
+    },
+    {
+      "name": "Delayed Marriage ($5M, marriage at 30)",
+      "params": {
+        "initialFund": 5000000,
+        "totalFertilityRate": 2,
+        "medianMarriageAge": 30
+      },
+      "successRate": 0.89,
+      "medianRuinYear": 2125,
+      "avgFinalFund": 2932956493096.601
+    },
+    {
+      "name": "Shrinking Family ($5M, TFR 1.5)",
+      "params": {
+        "initialFund": 5000000,
+        "totalFertilityRate": 1.5
+      },
+      "successRate": 0.71,
+      "medianRuinYear": 2110,
+      "avgFinalFund": 2080440153731.8406
+    },
+    {
+      "name": "Combined Optimal ($5M, TFR 1.5, marriage 30, 10% vol)",
+      "params": {
+        "initialFund": 5000000,
+        "totalFertilityRate": 1.5,
+        "medianMarriageAge": 30,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.985,
+      "medianRuinYear": 2124,
+      "avgFinalFund": 3779801419907.911
+    },
+    {
+      "name": "Aggressive Family ($5M, TFR 3.0, 12% return)",
+      "params": {
+        "initialFund": 5000000,
+        "totalFertilityRate": 3,
+        "realReturnRate": 0.12
+      },
+      "successRate": 0.995,
+      "medianRuinYear": 2101,
+      "avgFinalFund": 33696845749796516
+    },
+    {
+      "name": "Conservative Wealth ($10M, TFR 2.0, 6% return, 10% vol)",
+      "params": {
+        "initialFund": 10000000,
+        "totalFertilityRate": 2,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.9,
+      "medianRuinYear": 2171,
+      "avgFinalFund": 973230250313.6614
+    },
+    {
+      "name": "Maximum Safety ($10M, TFR 1.5, marriage 30, 10% vol, 8% return)",
+      "params": {
+        "initialFund": 10000000,
+        "totalFertilityRate": 1.5,
+        "medianMarriageAge": 30,
+        "returnVolatility": 0.1,
+        "realReturnRate": 0.08
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 37487013997919.29
+    }
+  ],
+  "returnFor90": [
+    {
+      "name": "tfr1.5_ret0.06",
+      "params": {
+        "totalFertilityRate": 1.5,
+        "realReturnRate": 0.06,
+        "initialFund": 5000000
+      },
+      "successRate": 0.435,
+      "medianRuinYear": 2100,
+      "avgFinalFund": 231973092126.78665
+    },
+    {
+      "name": "tfr1.5_ret0.07",
+      "params": {
+        "totalFertilityRate": 1.5,
+        "realReturnRate": 0.07,
+        "initialFund": 5000000
+      },
+      "successRate": 0.72,
+      "medianRuinYear": 2109,
+      "avgFinalFund": 2345111777978.5005
+    },
+    {
+      "name": "tfr1.5_ret0.08",
+      "params": {
+        "totalFertilityRate": 1.5,
+        "realReturnRate": 0.08,
+        "initialFund": 5000000
+      },
+      "successRate": 0.875,
+      "medianRuinYear": 2097,
+      "avgFinalFund": 26417982383452.445
+    },
+    {
+      "name": "tfr1.5_ret0.09",
+      "params": {
+        "totalFertilityRate": 1.5,
+        "realReturnRate": 0.09,
+        "initialFund": 5000000
+      },
+      "successRate": 0.955,
+      "medianRuinYear": 2103,
+      "avgFinalFund": 165682388943901.2
+    },
+    {
+      "name": "tfr2_ret0.06",
+      "params": {
+        "totalFertilityRate": 2,
+        "realReturnRate": 0.06,
+        "initialFund": 5000000
+      },
+      "successRate": 0.405,
+      "medianRuinYear": 2098,
+      "avgFinalFund": 1758793398750.608
+    },
+    {
+      "name": "tfr2_ret0.07",
+      "params": {
+        "totalFertilityRate": 2,
+        "realReturnRate": 0.07,
+        "initialFund": 5000000
+      },
+      "successRate": 0.655,
+      "medianRuinYear": 2101,
+      "avgFinalFund": 1962835436307.4055
+    },
+    {
+      "name": "tfr2_ret0.08",
+      "params": {
+        "totalFertilityRate": 2,
+        "realReturnRate": 0.08,
+        "initialFund": 5000000
+      },
+      "successRate": 0.895,
+      "medianRuinYear": 2096,
+      "avgFinalFund": 20236879911363.496
+    },
+    {
+      "name": "tfr2_ret0.09",
+      "params": {
+        "totalFertilityRate": 2,
+        "realReturnRate": 0.09,
+        "initialFund": 5000000
+      },
+      "successRate": 0.96,
+      "medianRuinYear": 2098,
+      "avgFinalFund": 152842873511336
+    },
+    {
+      "name": "tfr2.5_ret0.06",
+      "params": {
+        "totalFertilityRate": 2.5,
+        "realReturnRate": 0.06,
+        "initialFund": 5000000
+      },
+      "successRate": 0.22,
+      "medianRuinYear": 2103,
+      "avgFinalFund": 200654214633.934
+    },
+    {
+      "name": "tfr2.5_ret0.07",
+      "params": {
+        "totalFertilityRate": 2.5,
+        "realReturnRate": 0.07,
+        "initialFund": 5000000
+      },
+      "successRate": 0.535,
+      "medianRuinYear": 2108,
+      "avgFinalFund": 1423907705993.075
+    },
+    {
+      "name": "tfr2.5_ret0.08",
+      "params": {
+        "totalFertilityRate": 2.5,
+        "realReturnRate": 0.08,
+        "initialFund": 5000000
+      },
+      "successRate": 0.77,
+      "medianRuinYear": 2141,
+      "avgFinalFund": 16654646878799.752
+    },
+    {
+      "name": "tfr2.5_ret0.09",
+      "params": {
+        "totalFertilityRate": 2.5,
+        "realReturnRate": 0.09,
+        "initialFund": 5000000
+      },
+      "successRate": 0.9,
+      "medianRuinYear": 2121,
+      "avgFinalFund": 95096017731209
+    },
+    {
+      "name": "tfr2.5_ret0.1",
+      "params": {
+        "totalFertilityRate": 2.5,
+        "realReturnRate": 0.1,
+        "initialFund": 5000000
+      },
+      "successRate": 0.975,
+      "medianRuinYear": 2093,
+      "avgFinalFund": 1868068502425865.5
+    },
+    {
+      "name": "tfr3_ret0.06",
+      "params": {
+        "totalFertilityRate": 3,
+        "realReturnRate": 0.06,
+        "initialFund": 5000000
+      },
+      "successRate": 0.225,
+      "medianRuinYear": 2100,
+      "avgFinalFund": 119726905951.32904
+    },
+    {
+      "name": "tfr3_ret0.07",
+      "params": {
+        "totalFertilityRate": 3,
+        "realReturnRate": 0.07,
+        "initialFund": 5000000
+      },
+      "successRate": 0.475,
+      "medianRuinYear": 2117,
+      "avgFinalFund": 1862611291443.0984
+    },
+    {
+      "name": "tfr3_ret0.08",
+      "params": {
+        "totalFertilityRate": 3,
+        "realReturnRate": 0.08,
+        "initialFund": 5000000
+      },
+      "successRate": 0.71,
+      "medianRuinYear": 2115,
+      "avgFinalFund": 18578528939081.637
+    },
+    {
+      "name": "tfr3_ret0.09",
+      "params": {
+        "totalFertilityRate": 3,
+        "realReturnRate": 0.09,
+        "initialFund": 5000000
+      },
+      "successRate": 0.895,
+      "medianRuinYear": 2119,
+      "avgFinalFund": 154226149071501.53
+    },
+    {
+      "name": "tfr3_ret0.1",
+      "params": {
+        "totalFertilityRate": 3,
+        "realReturnRate": 0.1,
+        "initialFund": 5000000
+      },
+      "successRate": 0.995,
+      "medianRuinYear": 2147,
+      "avgFinalFund": 476253226637652.06
+    }
+  ]
+}
