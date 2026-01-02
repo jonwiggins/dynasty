@@ -67,8 +67,8 @@ export function SensitivityPanel({
               }}
             />
             <Tooltip
-              formatter={(value: number) => [`${value.toFixed(1)}%`, 'Success Rate']}
-              labelFormatter={(value: number) => config.format(value)}
+              formatter={(value) => [`${Number(value).toFixed(1)}%`, 'Success Rate']}
+              labelFormatter={(value) => config.format(Number(value))}
               contentStyle={{
                 backgroundColor: '#1a1a2e',
                 border: '1px solid #333',
@@ -108,7 +108,7 @@ export function SensitivityPanel({
 function getInsight(
   sensitivity: SensitivityResult,
   currentValue: number,
-  config: { min: number; max: number; format: (v: number) => string }
+  _config: { min: number; max: number; format: (v: number) => string }
 ): string {
   const points = sensitivity.points;
   const minSuccess = Math.min(...points.map((p) => p.successRate));

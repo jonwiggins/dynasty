@@ -17,60 +17,49 @@ function randomNormal(mean: number, stdDev: number): number {
   return mean + stdDev * z;
 }
 
-// Simplified mortality model based on Gompertz-Makeham law
-function getMortalityRate(age: number, _params: SimulationParams): number {
-  // Simplified: probability of death increases exponentially with age
-  const a = 0.0001; // Base mortality
-  const b = 0.085; // Aging rate
-  return Math.min(1, a * Math.exp(b * age));
-}
-
-// Get probability of marriage at a given age
-function getMarriageHazard(
+// Check if person should get married this year (deterministic at median age)
+function shouldMarry(
   age: number,
   params: SimulationParams,
   alreadyMarried: boolean
-): number {
-  if (alreadyMarried || age < 18) return 0;
-
-  // Normal distribution centered at median marriage age
-  const z = (age - params.medianMarriageAge) / params.marriageAgeStdDev;
-  const pdf = Math.exp(-0.5 * z * z) / (params.marriageAgeStdDev * Math.sqrt(2 * Math.PI));
-
-  // Scale by never-married rate and convert to hazard
-  // Higher multiplier to ensure most people get married
-  return Math.min(0.3, pdf * (1 - params.neverMarriedRate) * 3.0);
+): boolean {
+  if (alreadyMarried || age < 18) return false;
+  // Marry exactly at the median marriage age
+  return age === params.medianMarriageAge;
 }
 
-// Get probability of birth for a married woman
-function getBirthProbability(
+// Check if woman should have a child this year (deterministic based on TFR)
+function shouldHaveChild(
   age: number,
   yearsMarried: number,
   numChildren: number,
   params: SimulationParams
-): number {
-  if (age < params.minChildbearingAge || age > params.maxChildbearingAge) return 0;
-  if (yearsMarried < params.firstChildDelay && numChildren === 0) return 0;
+): boolean {
+  if (age < params.minChildbearingAge || age > params.maxChildbearingAge) return false;
+  if (yearsMarried < params.firstChildDelay && numChildren === 0) return false;
 
-  // Calculate target children per woman (TFR)
-  const targetChildren = params.totalFertilityRate;
+  // Target number of children (round TFR)
+  const targetChildren = Math.round(params.totalFertilityRate);
 
-  // Stop having children after reaching target * 1.5
-  if (numChildren >= Math.ceil(targetChildren * 1.5)) return 0;
+  // Already have enough children
+  if (numChildren >= targetChildren) return false;
 
-  // Higher base probability to ensure TFR is achieved
-  // We want ~TFR children over the fertile years, with higher probability early
-  const fertilePeriod = params.maxChildbearingAge - params.minChildbearingAge;
-  const baseProbability = (targetChildren * 1.5) / fertilePeriod;
+  // Calculate spacing: spread children evenly over fertile years after first child delay
+  // First child comes after firstChildDelay years of marriage
+  // Subsequent children are spaced evenly
+  const effectiveMarriageAge = Math.max(params.minChildbearingAge, params.medianMarriageAge);
+  const fertileYearsRemaining = params.maxChildbearingAge - effectiveMarriageAge - params.firstChildDelay;
+  const spacing = Math.max(2, Math.floor(fertileYearsRemaining / targetChildren));
 
-  // Adjust for age (fertility peaks around 25-30)
-  const peakAge = 28;
-  const ageFactor = Math.exp(-0.5 * Math.pow((age - peakAge) / 10, 2));
+  // Calculate when each child should be born
+  const yearsAfterFirstEligible = yearsMarried - params.firstChildDelay;
+  if (yearsAfterFirstEligible < 0) return false;
 
-  // Reduce probability as more children are born (spacing effect)
-  const childFactor = 1 / (1 + numChildren * 0.3);
+  // First child at firstChildDelay, then every 'spacing' years
+  const expectedChildren = Math.floor(yearsAfterFirstEligible / spacing) + 1;
 
-  return Math.min(0.4, baseProbability * ageFactor * childFactor);
+  // Have a child if we're behind schedule
+  return numChildren < expectedChildren && numChildren < targetChildren;
 }
 
 let nextPersonId = 0;
@@ -88,9 +77,14 @@ function createPerson(
   const adjustedLifeExpectancy = params.baseLifeExpectancy +
     (yearsFromStart * params.lifeExpectancyGrowth);
 
+  // Minimum lifespan ensures people can marry and have children
+  // At minimum: marriage age + first child delay + time for TFR children (2 years each)
+  const minLifespan = params.medianMarriageAge + params.firstChildDelay +
+    Math.round(params.totalFertilityRate) * 2 + 5;
+
   // Generate death year based on life expectancy
   const lifeSpan = Math.max(
-    1,
+    minLifespan,
     randomNormal(adjustedLifeExpectancy, params.lifeExpectancyStdDev)
   );
 
@@ -174,7 +168,7 @@ export function runSingleSimulation(params: SimulationParams, debug = false): Si
 
       // Check for marriage (if single and not already checked)
       if (person.marriageYear === null && person.spouseId === null) {
-        if (Math.random() < getMarriageHazard(age, params, false)) {
+        if (shouldMarry(age, params, false)) {
           person.marriageYear = year;
 
           // Create spouse
@@ -215,12 +209,12 @@ export function runSingleSimulation(params: SimulationParams, debug = false): Si
         (p) => p.parentIds && p.parentIds[0] === woman.id
       ).length;
 
-      const birthProb = getBirthProbability(age, yearsMarried, existingChildren, params);
-      if (debug && birthProb > 0 && year <= params.startYear + 50) {
-        console.log(`  Woman ID=${woman.id}, age=${age}, yearsMarried=${yearsMarried}, children=${existingChildren}, birthProb=${birthProb.toFixed(3)}`);
+      const shouldBirth = shouldHaveChild(age, yearsMarried, existingChildren, params);
+      if (debug && year <= params.startYear + 50) {
+        console.log(`  Woman ID=${woman.id}, age=${age}, yearsMarried=${yearsMarried}, children=${existingChildren}, shouldBirth=${shouldBirth}`);
       }
 
-      if (Math.random() < birthProb) {
+      if (shouldBirth) {
         const childGender = Math.random() < 0.5 ? 'male' : 'female';
         const child = createPerson(
           year,
