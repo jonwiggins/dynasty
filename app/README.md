@@ -80,6 +80,63 @@ npm run preview
 - **Median Ruin Year**: When the fund fails in unsuccessful simulations
 - **Starting Payout Rate**: Initial withdrawal rate as percentage of fund
 
+## Research Findings
+
+We conducted a comprehensive study using 30,000+ Monte Carlo simulations to answer key questions about dynasty fund sustainability. See the full report in [`research/RESEARCH_REPORT.md`](research/RESEARCH_REPORT.md).
+
+### Key Discoveries
+
+**1. Volatility Matters More Than Returns**
+
+| Volatility | Success Rate (at 7% return) |
+|------------|----------------------------|
+| 5% | ~100% |
+| 10% | ~91% |
+| 15% | ~66% |
+| 25% | ~25% |
+
+Reducing volatility from 15% to 10% improves success by ~25 percentage points—equivalent to adding millions to the initial fund.
+
+**2. The "4% Rule" Fails for Dynasties**
+
+| Withdrawal Rate | Success Rate |
+|-----------------|--------------|
+| 4.2% | ~26% |
+| 1.7% | ~68% |
+| 0.8% | ~86% |
+
+Dynasty safe withdrawal rate is **<1%**, not 4%. Plan for fund = 100x+ first year payout.
+
+**3. The Fertility Paradox**
+
+| TFR | Success Rate |
+|-----|--------------|
+| 1.0 (shrinking) | ~87% |
+| 2.0 (replacement) | ~70% |
+| 4.0 (rapid growth) | ~31% |
+
+Lower fertility dramatically improves fund survival, creating a tension between financial and demographic success.
+
+**4. Minimum Viable Fund**
+
+- **$5M**: ~70% success
+- **$15M**: ~91% success
+- **$20M**: ~95% success
+
+For 90%+ confidence over 200 years, plan for $15-20M initial fund.
+
+**5. Marriage Age as a Lever**
+
+Delaying marriage from age 20 to 35 improves success from ~68% to ~91% by reducing overlapping generations.
+
+### Optimal Configuration
+
+For maximum sustainability with a $5M fund:
+- TFR 1.5, Marriage age 30, 10% volatility → **~98% success**
+
+For near-certain success:
+- $10M, TFR 1.5, Marriage age 30, 10% volatility, 8% return → **~100% success**
+
 ## License
 
 MIT
