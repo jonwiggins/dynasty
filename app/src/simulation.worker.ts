@@ -24,8 +24,9 @@ self.onmessage = (e: MessageEvent<{
     const singleResult = runSingleSimulation(params);
 
     // Run sensitivity analysis if a param is selected
+    // Skip for maxYears as it's too slow (each point runs a longer simulation)
     let sensitivity = null;
-    if (selectedParam) {
+    if (selectedParam && selectedParam !== 'maxYears') {
       const config = PARAM_CONFIGS[selectedParam];
       if (config) {
         const points: SensitivityPoint[] = [];
