@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import {
   Line,
   XAxis,
@@ -16,6 +16,8 @@ import type { SimulationParams, AggregateResults } from './types';
 import { DEFAULT_PARAMS } from './types';
 import { runMultipleSimulations, runSingleSimulation } from './simulation';
 import type { SimulationResult } from './simulation';
+import { useSensitivityAnalysis } from './useSensitivityAnalysis';
+import { SensitivityPanel } from './SensitivityPanel';
 import './App.css';
 
 function formatCurrency(value: number): string {
@@ -43,6 +45,8 @@ interface ParameterSliderProps {
   step: number;
   format?: (v: number) => string;
   onChange: (value: number) => void;
+  onSelect?: () => void;
+  isSelected?: boolean;
 }
 
 function ParameterSlider({
@@ -53,9 +57,14 @@ function ParameterSlider({
   step,
   format = (v) => v.toString(),
   onChange,
+  onSelect,
+  isSelected,
 }: ParameterSliderProps) {
   return (
-    <div className="parameter-slider">
+    <div
+      className={`parameter-slider ${isSelected ? 'selected' : ''}`}
+      onClick={onSelect}
+    >
       <label>
         <span className="param-label">{label}</span>
         <span className="param-value">{format(value)}</span>
@@ -67,6 +76,7 @@ function ParameterSlider({
         step={step}
         value={value}
         onChange={(e) => onChange(parseFloat(e.target.value))}
+        onFocus={onSelect}
       />
     </div>
   );
@@ -78,6 +88,9 @@ function App() {
   const [singleResult, setSingleResult] = useState<SimulationResult | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [showSingleRun, setShowSingleRun] = useState(false);
+  const [selectedParam, setSelectedParam] = useState<keyof SimulationParams | null>(null);
+
+  const sensitivity = useSensitivityAnalysis(params, selectedParam);
 
   const updateParam = useCallback(
     <K extends keyof SimulationParams>(key: K, value: SimulationParams[K]) => {
@@ -86,17 +99,17 @@ function App() {
     []
   );
 
-  const runSimulation = useCallback(() => {
+  // Auto-run simulation when params change
+  useEffect(() => {
     setIsRunning(true);
-    // Use setTimeout to allow UI to update
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       const newResults = runMultipleSimulations(params);
       setResults(newResults);
-      // Also run a single deterministic simulation for detailed view
-      const single = runSingleSimulation(params);
+      const single = runSingleSimulation(params, true); // debug mode
       setSingleResult(single);
       setIsRunning(false);
-    }, 50);
+    }, 100);
+    return () => clearTimeout(timer);
   }, [params]);
 
   // Prepare chart data
@@ -105,11 +118,9 @@ function App() {
 
     return results.percentileResults.p50.map((snapshot, idx) => ({
       year: snapshot.year,
-      p5: results.percentileResults.p5[idx]?.fundBalance || 0,
       p25: results.percentileResults.p25[idx]?.fundBalance || 0,
       p50: snapshot.fundBalance,
       p75: results.percentileResults.p75[idx]?.fundBalance || 0,
-      p95: results.percentileResults.p95[idx]?.fundBalance || 0,
     }));
   }, [results]);
 
@@ -160,19 +171,23 @@ function App() {
               label="Initial Fund"
               value={params.initialFund}
               min={500_000}
-              max={50_000_000}
+              max={10_000_000}
               step={100_000}
               format={formatCurrency}
               onChange={(v) => updateParam('initialFund', v)}
+              onSelect={() => setSelectedParam('initialFund')}
+              isSelected={selectedParam === 'initialFund'}
             />
             <ParameterSlider
               label="Founder Age"
               value={params.founderAge}
-              min={20}
+              min={1}
               max={50}
               step={1}
               format={(v) => `${v} years`}
               onChange={(v) => updateParam('founderAge', v)}
+              onSelect={() => setSelectedParam('founderAge')}
+              isSelected={selectedParam === 'founderAge'}
             />
           </section>
 
@@ -182,10 +197,12 @@ function App() {
               label="Real Return Rate"
               value={params.realReturnRate}
               min={0.02}
-              max={0.12}
+              max={0.15}
               step={0.005}
               format={formatPercent}
               onChange={(v) => updateParam('realReturnRate', v)}
+              onSelect={() => setSelectedParam('realReturnRate')}
+              isSelected={selectedParam === 'realReturnRate'}
             />
             <ParameterSlider
               label="Return Volatility"
@@ -195,6 +212,8 @@ function App() {
               step={0.01}
               format={formatPercent}
               onChange={(v) => updateParam('returnVolatility', v)}
+              onSelect={() => setSelectedParam('returnVolatility')}
+              isSelected={selectedParam === 'returnVolatility'}
             />
           </section>
 
@@ -208,6 +227,8 @@ function App() {
               step={2_000}
               format={formatCurrency}
               onChange={(v) => updateParam('initialMedianIncome', v)}
+              onSelect={() => setSelectedParam('initialMedianIncome')}
+              isSelected={selectedParam === 'initialMedianIncome'}
             />
             <ParameterSlider
               label="Real Income Growth"
@@ -217,6 +238,8 @@ function App() {
               step={0.001}
               format={formatPercent}
               onChange={(v) => updateParam('realIncomeGrowth', v)}
+              onSelect={() => setSelectedParam('realIncomeGrowth')}
+              isSelected={selectedParam === 'realIncomeGrowth'}
             />
           </section>
 
@@ -230,6 +253,8 @@ function App() {
               step={0.1}
               format={(v) => `${v.toFixed(1)} children`}
               onChange={(v) => updateParam('totalFertilityRate', v)}
+              onSelect={() => setSelectedParam('totalFertilityRate')}
+              isSelected={selectedParam === 'totalFertilityRate'}
             />
             <ParameterSlider
               label="Marriage Age"
@@ -239,15 +264,30 @@ function App() {
               step={1}
               format={(v) => `${v} years`}
               onChange={(v) => updateParam('medianMarriageAge', v)}
+              onSelect={() => setSelectedParam('medianMarriageAge')}
+              isSelected={selectedParam === 'medianMarriageAge'}
             />
             <ParameterSlider
               label="Life Expectancy"
               value={params.baseLifeExpectancy}
               min={60}
-              max={100}
+              max={120}
               step={1}
               format={(v) => `${v} years`}
               onChange={(v) => updateParam('baseLifeExpectancy', v)}
+              onSelect={() => setSelectedParam('baseLifeExpectancy')}
+              isSelected={selectedParam === 'baseLifeExpectancy'}
+            />
+            <ParameterSlider
+              label="Life Exp. Growth"
+              value={params.lifeExpectancyGrowth}
+              min={0}
+              max={0.5}
+              step={0.05}
+              format={(v) => `${(v * 10).toFixed(1)} yrs/decade`}
+              onChange={(v) => updateParam('lifeExpectancyGrowth', v)}
+              onSelect={() => setSelectedParam('lifeExpectancyGrowth')}
+              isSelected={selectedParam === 'lifeExpectancyGrowth'}
             />
           </section>
 
@@ -261,25 +301,17 @@ function App() {
               step={10}
               format={(v) => `${v} years`}
               onChange={(v) => updateParam('maxYears', v)}
-            />
-            <ParameterSlider
-              label="Number of Runs"
-              value={params.numSimulations}
-              min={10}
-              max={500}
-              step={10}
-              format={(v) => `${v} runs`}
-              onChange={(v) => updateParam('numSimulations', v)}
+              onSelect={() => setSelectedParam('maxYears')}
+              isSelected={selectedParam === 'maxYears'}
             />
           </section>
 
-          <button
-            className="run-button"
-            onClick={runSimulation}
-            disabled={isRunning}
-          >
-            {isRunning ? 'Running...' : 'Run Simulation'}
-          </button>
+          {isRunning && (
+            <div className="running-indicator">
+              <div className="spinner"></div>
+              <span>Simulating 100 runs...</span>
+            </div>
+          )}
         </aside>
 
         <main className="results">
@@ -353,15 +385,6 @@ function App() {
                     <Legend />
                     <Area
                       type="monotone"
-                      dataKey="p95"
-                      stackId="1"
-                      stroke="#4CAF50"
-                      fill="#4CAF50"
-                      fillOpacity={0.2}
-                      name="95th percentile"
-                    />
-                    <Area
-                      type="monotone"
                       dataKey="p75"
                       stackId="2"
                       stroke="#8BC34A"
@@ -387,18 +410,17 @@ function App() {
                       fillOpacity={0.3}
                       name="25th percentile"
                     />
-                    <Area
-                      type="monotone"
-                      dataKey="p5"
-                      stackId="5"
-                      stroke="#f44336"
-                      fill="#f44336"
-                      fillOpacity={0.2}
-                      name="5th percentile"
-                    />
-                  </AreaChart>
+                    </AreaChart>
                 </ResponsiveContainer>
               </div>
+
+              {sensitivity && selectedParam && (
+                <SensitivityPanel
+                  sensitivity={sensitivity}
+                  currentValue={params[selectedParam] as number}
+                  onClose={() => setSelectedParam(null)}
+                />
+              )}
 
               <div className="toggle-section">
                 <button

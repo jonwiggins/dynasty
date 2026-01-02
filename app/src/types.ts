@@ -39,6 +39,7 @@ export interface SimulationParams {
   // Mortality (simplified - uses base life expectancy)
   baseLifeExpectancy: number;
   lifeExpectancyStdDev: number;
+  lifeExpectancyGrowth: number; // Years added per year (e.g., 0.1 = 1 year per decade)
 
   // Eligibility
   eligibilityAge: number; // Age to start receiving payouts
@@ -85,10 +86,38 @@ export interface AggregateResults {
   allResults: SimulationResult[];
 }
 
+export interface ParamConfig {
+  min: number;
+  max: number;
+  step: number;
+  label: string;
+  format: (v: number) => string;
+}
+
+const formatCurrency = (v: number) => `$${(v / 1_000_000).toFixed(1)}M`;
+const formatPercent = (v: number) => `${(v * 100).toFixed(1)}%`;
+const formatNumber = (v: number) => v.toFixed(1);
+const formatInt = (v: number) => v.toFixed(0);
+const formatIncome = (v: number) => `$${(v / 1000).toFixed(0)}K`;
+
+export const PARAM_CONFIGS: Partial<Record<keyof SimulationParams, ParamConfig>> = {
+  initialFund: { min: 500_000, max: 10_000_000, step: 500_000, label: 'Initial Fund', format: formatCurrency },
+  founderAge: { min: 1, max: 50, step: 1, label: 'Founder Age', format: formatInt },
+  realReturnRate: { min: 0.02, max: 0.15, step: 0.005, label: 'Real Return Rate', format: formatPercent },
+  returnVolatility: { min: 0.05, max: 0.30, step: 0.01, label: 'Return Volatility', format: formatPercent },
+  initialMedianIncome: { min: 40_000, max: 150_000, step: 2_000, label: 'Median Income', format: formatIncome },
+  realIncomeGrowth: { min: 0, max: 0.03, step: 0.001, label: 'Real Income Growth', format: formatPercent },
+  totalFertilityRate: { min: 0.5, max: 4.0, step: 0.1, label: 'Fertility Rate', format: formatNumber },
+  medianMarriageAge: { min: 20, max: 40, step: 1, label: 'Marriage Age', format: formatInt },
+  baseLifeExpectancy: { min: 60, max: 120, step: 1, label: 'Life Expectancy', format: formatInt },
+  lifeExpectancyGrowth: { min: 0, max: 0.5, step: 0.05, label: 'Life Exp. Growth', format: (v: number) => `${(v * 10).toFixed(1)} yrs/decade` },
+  maxYears: { min: 50, max: 500, step: 10, label: 'Years to Simulate', format: formatInt },
+};
+
 export const DEFAULT_PARAMS: SimulationParams = {
   // Initial conditions
   initialFund: 5_000_000,
-  founderAge: 30,
+  founderAge: 1,
   startYear: 2025,
 
   // Investment parameters
@@ -100,19 +129,20 @@ export const DEFAULT_PARAMS: SimulationParams = {
   realIncomeGrowth: 0.008, // 0.8% real growth
 
   // Marriage parameters
-  medianMarriageAge: 29,
+  medianMarriageAge: 20,
   marriageAgeStdDev: 5,
   neverMarriedRate: 0.15,
 
   // Fertility parameters
-  totalFertilityRate: 1.6,
+  totalFertilityRate: 2.0,
   minChildbearingAge: 20,
   maxChildbearingAge: 45,
   firstChildDelay: 2,
 
   // Mortality
-  baseLifeExpectancy: 80,
-  lifeExpectancyStdDev: 10,
+  baseLifeExpectancy: 78, // Current US life expectancy
+  lifeExpectancyStdDev: 12,
+  lifeExpectancyGrowth: 0.15, // ~1.5 years per decade (historical average)
 
   // Eligibility
   eligibilityAge: 18,

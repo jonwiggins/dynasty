@@ -38,7 +38,8 @@ function getMarriageHazard(
   const pdf = Math.exp(-0.5 * z * z) / (params.marriageAgeStdDev * Math.sqrt(2 * Math.PI));
 
   // Scale by never-married rate and convert to hazard
-  return pdf * (1 - params.neverMarriedRate) * 1.5;
+  // Higher multiplier to ensure most people get married
+  return Math.min(0.3, pdf * (1 - params.neverMarriedRate) * 3.0);
 }
 
 // Get probability of birth for a married woman
@@ -54,21 +55,22 @@ function getBirthProbability(
   // Calculate target children per woman (TFR)
   const targetChildren = params.totalFertilityRate;
 
-  // Probability decreases as you approach target
-  if (numChildren >= targetChildren * 1.5) return 0;
+  // Stop having children after reaching target * 1.5
+  if (numChildren >= Math.ceil(targetChildren * 1.5)) return 0;
 
-  // Base probability considering childbearing years
-  const fertilityWindow = params.maxChildbearingAge - params.minChildbearingAge;
-  const baseProbability = targetChildren / fertilityWindow;
+  // Higher base probability to ensure TFR is achieved
+  // We want ~TFR children over the fertile years, with higher probability early
+  const fertilePeriod = params.maxChildbearingAge - params.minChildbearingAge;
+  const baseProbability = (targetChildren * 1.5) / fertilePeriod;
 
   // Adjust for age (fertility peaks around 25-30)
   const peakAge = 28;
-  const ageFactor = Math.exp(-0.5 * Math.pow((age - peakAge) / 8, 2));
+  const ageFactor = Math.exp(-0.5 * Math.pow((age - peakAge) / 10, 2));
 
-  // Adjust for existing children (spacing)
-  const childFactor = Math.exp(-0.3 * numChildren);
+  // Reduce probability as more children are born (spacing effect)
+  const childFactor = 1 / (1 + numChildren * 0.3);
 
-  return baseProbability * ageFactor * childFactor;
+  return Math.min(0.4, baseProbability * ageFactor * childFactor);
 }
 
 let nextPersonId = 0;
@@ -80,10 +82,16 @@ function createPerson(
   parentIds: [number, number] | null = null,
   params: SimulationParams
 ): Person {
+  // Calculate life expectancy at birth, accounting for improvements over time
+  // Life expectancy grows each year from the start year
+  const yearsFromStart = Math.max(0, birthYear - params.startYear);
+  const adjustedLifeExpectancy = params.baseLifeExpectancy +
+    (yearsFromStart * params.lifeExpectancyGrowth);
+
   // Generate death year based on life expectancy
   const lifeSpan = Math.max(
     1,
-    randomNormal(params.baseLifeExpectancy, params.lifeExpectancyStdDev)
+    randomNormal(adjustedLifeExpectancy, params.lifeExpectancyStdDev)
   );
 
   return {
@@ -116,11 +124,13 @@ function createSpouse(
   return spouse;
 }
 
-export function runSingleSimulation(params: SimulationParams): SimulationResult {
+export function runSingleSimulation(params: SimulationParams, debug = false): SimulationResult {
   nextPersonId = 0;
 
   const family: Person[] = [];
   const snapshots: YearlySnapshot[] = [];
+
+  if (debug) console.log('=== Starting simulation ===');
 
   // Create founder
   const founderBirthYear = params.startYear - params.founderAge;
@@ -132,6 +142,8 @@ export function runSingleSimulation(params: SimulationParams): SimulationResult 
     params
   );
   family.push(founder);
+
+  if (debug) console.log(`Founder: ID=${founder.id}, gender=${founder.gender}, born=${founder.birthYear}, dies=${founder.deathYear}`);
 
   let fundBalance = params.initialFund;
   let medianIncome = params.initialMedianIncome;
@@ -145,24 +157,19 @@ export function runSingleSimulation(params: SimulationParams): SimulationResult 
     let deaths = 0;
     let marriages = 0;
 
+    // Get people alive at start of year (includes those who will die this year)
     const livingPeople = family.filter(
-      (p) => p.deathYear === null || p.deathYear > year
+      (p) => p.deathYear === null || p.deathYear >= year
     );
 
     // Process each living person
     for (const person of livingPeople) {
       const age = year - person.birthYear;
 
-      // Check for death
-      if (person.deathYear === null) {
-        if (Math.random() < getMortalityRate(age, params)) {
-          person.deathYear = year;
-          deaths++;
-          continue;
-        }
-      } else if (person.deathYear <= year) {
+      // Check for death this year
+      if (person.deathYear !== null && person.deathYear === year) {
         deaths++;
-        continue;
+        continue; // Skip further processing for this person
       }
 
       // Check for marriage (if single and not already checked)
@@ -177,6 +184,7 @@ export function runSingleSimulation(params: SimulationParams): SimulationResult 
           person.spouseId = spouse.id;
           family.push(spouse);
           marriages++;
+          if (debug) console.log(`Year ${year}: Marriage! Person ID=${person.id} (${person.gender}, gen ${person.generation}) married spouse ID=${spouse.id} (${spouse.gender}, age ${year - spouse.birthYear})`);
         }
       }
     }
@@ -186,10 +194,19 @@ export function runSingleSimulation(params: SimulationParams): SimulationResult 
       if (p.gender !== 'female') return false;
       if (p.marriageYear === null || p.marriageYear > year) return false;
       if (p.deathYear !== null && p.deathYear <= year) return false;
+      // Also check spouse is alive
+      const spouse = family.find((s) => s.id === p.spouseId);
+      if (spouse && spouse.deathYear !== null && spouse.deathYear <= year) return false;
 
       const age = year - p.birthYear;
       return age >= params.minChildbearingAge && age <= params.maxChildbearingAge;
     });
+
+    if (debug && year <= params.startYear + 50) {
+      const femalesInFamily = family.filter(p => p.gender === 'female').length;
+      const marriedFemales = family.filter(p => p.gender === 'female' && p.marriageYear !== null && p.marriageYear <= year).length;
+      console.log(`Year ${year}: ${femalesInFamily} females in family, ${marriedFemales} married, ${marriedWomen.length} eligible for birth`);
+    }
 
     for (const woman of marriedWomen) {
       const age = year - woman.birthYear;
@@ -198,7 +215,12 @@ export function runSingleSimulation(params: SimulationParams): SimulationResult 
         (p) => p.parentIds && p.parentIds[0] === woman.id
       ).length;
 
-      if (Math.random() < getBirthProbability(age, yearsMarried, existingChildren, params)) {
+      const birthProb = getBirthProbability(age, yearsMarried, existingChildren, params);
+      if (debug && birthProb > 0 && year <= params.startYear + 50) {
+        console.log(`  Woman ID=${woman.id}, age=${age}, yearsMarried=${yearsMarried}, children=${existingChildren}, birthProb=${birthProb.toFixed(3)}`);
+      }
+
+      if (Math.random() < birthProb) {
         const childGender = Math.random() < 0.5 ? 'male' : 'female';
         const child = createPerson(
           year,
@@ -210,6 +232,7 @@ export function runSingleSimulation(params: SimulationParams): SimulationResult 
         family.push(child);
         births++;
         maxGeneration = Math.max(maxGeneration, child.generation);
+        if (debug) console.log(`Year ${year}: Birth! Child ID=${child.id} (${childGender}, gen ${child.generation}) to mother ID=${woman.id}`);
       }
     }
 
