@@ -1,10 +1,18 @@
-# Dynasty Fund Simulator
+# Fund Sustainability Simulators
 
-An interactive web application that models the long-term sustainability of a perpetual fund designed to pay median U.S. income to a growing family lineage across multiple generations.
+Interactive web applications that model long-term sustainability of perpetual funds using Monte Carlo simulation.
+
+## Two Simulators
+
+### Dynasty Fund Simulator (`/`)
+Models a perpetual fund paying median U.S. income to a growing family lineage across multiple generations (50-500 years).
+
+### UBI Sovereign Wealth Fund Simulator (`/ubi.html`)
+Models a national sovereign wealth fund providing Universal Basic Income to an entire country's population (25-200 years).
 
 ## Overview
 
-The Dynasty Fund Simulator combines demographic modeling with stochastic investment simulation to help users understand whether a given fund amount can sustain payouts to an ever-growing family tree over 50-500 years. It runs 100 Monte Carlo simulations to provide probabilistic outcomes rather than single-point estimates.
+Both simulators combine demographic/population modeling with stochastic investment simulation to provide probabilistic outcomes rather than single-point estimates. They run 100 Monte Carlo simulations per parameter set.
 
 ## Features
 
@@ -136,6 +144,72 @@ For maximum sustainability with a $5M fund:
 
 For near-certain success:
 - $10M, TFR 1.5, Marriage age 30, 10% volatility, 8% return → **~100% success**
+
+---
+
+## UBI Research Findings
+
+We conducted a comprehensive study on sovereign wealth fund sustainability for UBI programs. See the full report in [`research/UBI_RESEARCH_REPORT.md`](research/UBI_RESEARCH_REPORT.md).
+
+### Key Discoveries
+
+**1. The Alaska Model Scales Perfectly**
+
+| Population Scale | Success Rate |
+|-----------------|--------------|
+| Alaska (730K) | >99.5% |
+| Norway-scale (5.5M) | 99.5% |
+| Medium nation (50M) | 98% |
+| Large nation (100M) | 98.5% |
+
+The Alaska model ($110K per capita, $133/month) achieves 98%+ success at any population scale.
+
+**2. Safe Withdrawal Rate is ~2%**
+
+| Withdrawal Rate | Success Rate |
+|-----------------|--------------|
+| 2% | ~86% |
+| 3% | ~64% |
+| 4% | ~37% |
+| 5% | ~23% |
+
+The 4% retirement rule fails for UBI. Target ≤2% for 85%+ confidence.
+
+**3. Per-Capita Requirements for $1,000/month UBI**
+
+| Per-Capita Fund | Success Rate |
+|-----------------|--------------|
+| $200K | ~25% |
+| $350K | ~73% |
+| $500K | ~93% |
+
+Meaningful UBI ($1,000/month) requires ~$500K per capita—$25T for 50M people.
+
+**4. Real-World Country Analysis**
+
+| Country | Per Capita | Sustainable UBI |
+|---------|-----------|-----------------|
+| Norway ($255K) | $500/month | 97.5% success |
+| Saudi Arabia ($26K) | $100/month | 40% success |
+| USA (needs $75-100T) | $500/month | ~85-95% success |
+
+Norway could sustainably pay ~$500/month today. The US would need $75-100T (4-5x GDP).
+
+**5. Volatility Matters (But Less Than Dynasty Funds)**
+
+At $200K per capita with $1000/mo UBI:
+
+| Volatility | 7% Return Success |
+|------------|-------------------|
+| 6% | 90% |
+| 10% | 67% |
+| 12% | 61% |
+
+Low volatility with moderate returns beats high returns with high volatility.
+
+### Key Insight
+
+**The "Alaska Threshold"**: ~$100K per capita can sustain ~$1,600/year indefinitely at any scale. This is the proven, scalable model for UBI via sovereign wealth funds.
 
 ## License
 

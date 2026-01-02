@@ -1,0 +1,1242 @@
+{
+  "perCapitaFund": [
+    {
+      "name": "perCapita_10K",
+      "params": {
+        "initialFund": 500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2026,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "perCapita_20K",
+      "params": {
+        "initialFund": 1000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2027,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "perCapita_30K",
+      "params": {
+        "initialFund": 1500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2028,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "perCapita_40K",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "perCapita_50K",
+      "params": {
+        "initialFund": 2500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2031,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "perCapita_75K",
+      "params": {
+        "initialFund": 3750000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2034,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "perCapita_100K",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.005,
+      "medianRuinYear": 2038,
+      "avgFinalFund": 79252186223.80539,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "perCapita_150K",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.075,
+      "medianRuinYear": 2046,
+      "avgFinalFund": 11408948008788.855,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "perCapita_200K",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.26,
+      "medianRuinYear": 2054,
+      "avgFinalFund": 64300381348381.81,
+      "avgFinalPopulation": 72320026
+    }
+  ],
+  "ubiAmount": [
+    {
+      "name": "ubi_200",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 200
+      },
+      "successRate": 0.26,
+      "medianRuinYear": 2054,
+      "avgFinalFund": 7936229530526.022,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_400",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 400
+      },
+      "successRate": 0.01,
+      "medianRuinYear": 2039,
+      "avgFinalFund": 498042637091.4361,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_600",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 600
+      },
+      "successRate": 0,
+      "medianRuinYear": 2033,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_800",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 800
+      },
+      "successRate": 0,
+      "medianRuinYear": 2031,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_1000",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_1200",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1200
+      },
+      "successRate": 0,
+      "medianRuinYear": 2028,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_1500",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1500
+      },
+      "successRate": 0,
+      "medianRuinYear": 2028,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_2000",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 2000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2027,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_2500",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 2500
+      },
+      "successRate": 0,
+      "medianRuinYear": 2026,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubi_3000",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 3000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2026,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    }
+  ],
+  "withdrawalRate": [
+    {
+      "name": "wr_2pct",
+      "params": {
+        "initialFund": 23250000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.86,
+      "medianRuinYear": 2086,
+      "avgFinalFund": 459851358240157.94,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "wr_3pct",
+      "params": {
+        "initialFund": 15500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.635,
+      "medianRuinYear": 2065,
+      "avgFinalFund": 220905502858349.4,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "wr_4pct",
+      "params": {
+        "initialFund": 11625000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.365,
+      "medianRuinYear": 2058,
+      "avgFinalFund": 63703332813701.6,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "wr_5pct",
+      "params": {
+        "initialFund": 9300000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.225,
+      "medianRuinYear": 2051,
+      "avgFinalFund": 34847572366879.215,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "wr_6pct",
+      "params": {
+        "initialFund": 7750000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.105,
+      "medianRuinYear": 2048,
+      "avgFinalFund": 14812932005896.285,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "wr_8pct",
+      "params": {
+        "initialFund": 5812500000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.01,
+      "medianRuinYear": 2041,
+      "avgFinalFund": 1590699845167.6775,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "wr_10pct",
+      "params": {
+        "initialFund": 4650000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2037,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "wr_15pct",
+      "params": {
+        "initialFund": 3100000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2032,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "wr_20pct",
+      "params": {
+        "initialFund": 2325000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    }
+  ],
+  "populationGrowth": [
+    {
+      "name": "growth_-1.0pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": -0.01,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 23767002
+    },
+    {
+      "name": "growth_-0.5pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": -0.005,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 34504678
+    },
+    {
+      "name": "growth_0.0pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": 0,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 50000000
+    },
+    {
+      "name": "growth_0.5pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": 0.005,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "growth_1.0pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": 0.01,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 104412300
+    },
+    {
+      "name": "growth_1.5pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": 0.015,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 150472498
+    },
+    {
+      "name": "growth_2.0pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": 0.02,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 216462522
+    },
+    {
+      "name": "growth_2.5pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": 0.025,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 310839387
+    },
+    {
+      "name": "growth_3.0pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "populationGrowthRate": 0.03,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 445578916
+    }
+  ],
+  "volatility": [
+    {
+      "name": "vol_5pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.05,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol_8pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.08,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol_10pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.1,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol_12pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.12,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol_15pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.15,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol_18pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.18,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol_20pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.2,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol_25pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.25,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol_30pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.3,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    }
+  ],
+  "eligibilityAge": [
+    {
+      "name": "eligibility_0",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "eligibilityAge": 0,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2028,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "eligibility_5",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "eligibilityAge": 5,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2028,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "eligibility_12",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "eligibilityAge": 12,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "eligibility_18",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "eligibilityAge": 18,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "eligibility_21",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "eligibilityAge": 21,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "eligibility_25",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "eligibilityAge": 25,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "eligibility_55",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "eligibilityAge": 55,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2038,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "eligibility_65",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "eligibilityAge": 65,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0.095,
+      "medianRuinYear": 2051,
+      "avgFinalFund": 4819804548589.37,
+      "avgFinalPopulation": 72320026
+    }
+  ],
+  "ubiGrowth": [
+    {
+      "name": "ubiGrowth_0.0pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiRealGrowth": 0,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubiGrowth_0.2pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiRealGrowth": 0.002,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubiGrowth_0.5pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiRealGrowth": 0.005,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubiGrowth_0.8pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiRealGrowth": 0.008,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubiGrowth_1.0pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiRealGrowth": 0.01,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubiGrowth_1.2pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiRealGrowth": 0.012,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubiGrowth_1.5pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiRealGrowth": 0.015,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "ubiGrowth_2.0pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "ubiRealGrowth": 0.02,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    }
+  ],
+  "returnRate": [
+    {
+      "name": "return_2pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.02,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "return_3pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.03,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "return_4pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.04,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "return_5pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.05,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "return_6pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.06,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "return_7pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.07,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "return_8pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.08,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "return_10pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.1,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "return_12pct",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "realReturnRate": 0.12,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2031,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    }
+  ],
+  "volReturnMatrix": [
+    {
+      "name": "vol8_ret4",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.08,
+        "realReturnRate": 0.04,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol8_ret5",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.08,
+        "realReturnRate": 0.05,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol8_ret6",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.08,
+        "realReturnRate": 0.06,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol8_ret7",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.08,
+        "realReturnRate": 0.07,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol8_ret8",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.08,
+        "realReturnRate": 0.08,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol12_ret4",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.12,
+        "realReturnRate": 0.04,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol12_ret5",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.12,
+        "realReturnRate": 0.05,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol12_ret6",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.12,
+        "realReturnRate": 0.06,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol12_ret7",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.12,
+        "realReturnRate": 0.07,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol12_ret8",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.12,
+        "realReturnRate": 0.08,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol16_ret4",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.16,
+        "realReturnRate": 0.04,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol16_ret5",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.16,
+        "realReturnRate": 0.05,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol16_ret6",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.16,
+        "realReturnRate": 0.06,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol16_ret7",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.16,
+        "realReturnRate": 0.07,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol16_ret8",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.16,
+        "realReturnRate": 0.08,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2030,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol20_ret4",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.04,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol20_ret5",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.05,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol20_ret6",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.06,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol20_ret7",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.07,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    },
+    {
+      "name": "vol20_ret8",
+      "params": {
+        "initialFund": 2000000000000,
+        "initialPopulation": 50000000,
+        "returnVolatility": 0.2,
+        "realReturnRate": 0.08,
+        "ubiMonthlyAmount": 1000
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 72320026
+    }
+  ],
+  "realWorld": [
+    {
+      "name": "norway_scale",
+      "params": {
+        "initialFund": 1402500000000,
+        "initialPopulation": 5500000,
+        "ubiMonthlyAmount": 1000,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.43,
+      "medianRuinYear": 2062,
+      "avgFinalFund": 8165437267641.951,
+      "avgFinalPopulation": 7955203
+    },
+    {
+      "name": "alaska_scale",
+      "params": {
+        "initialFund": 80300000000,
+        "initialPopulation": 730000,
+        "ubiMonthlyAmount": 133,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.985,
+      "medianRuinYear": 2094,
+      "avgFinalFund": 2151694442149.3994,
+      "avgFinalPopulation": 1055872
+    },
+    {
+      "name": "us_scale",
+      "params": {
+        "initialFund": 13200000000000,
+        "initialPopulation": 330000000,
+        "ubiMonthlyAmount": 1000,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0,
+      "medianRuinYear": 2029,
+      "avgFinalFund": 0,
+      "avgFinalPopulation": 477312172
+    }
+  ]
+}

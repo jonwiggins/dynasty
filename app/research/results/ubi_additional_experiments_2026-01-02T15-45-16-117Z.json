@@ -1,0 +1,1264 @@
+{
+  "largerFunds": [
+    {
+      "name": "perCapita_250K",
+      "params": {
+        "initialFund": 12500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.395,
+      "medianRuinYear": 2060,
+      "avgFinalFund": 78337254487270.3
+    },
+    {
+      "name": "perCapita_300K",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.54,
+      "medianRuinYear": 2065,
+      "avgFinalFund": 145966145063368.16
+    },
+    {
+      "name": "perCapita_350K",
+      "params": {
+        "initialFund": 17500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.73,
+      "medianRuinYear": 2067,
+      "avgFinalFund": 268479278368060.72
+    },
+    {
+      "name": "perCapita_400K",
+      "params": {
+        "initialFund": 20000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.825,
+      "medianRuinYear": 2069,
+      "avgFinalFund": 349215328805442.25
+    },
+    {
+      "name": "perCapita_500K",
+      "params": {
+        "initialFund": 25000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.925,
+      "medianRuinYear": 2082,
+      "avgFinalFund": 492017385977442.9
+    },
+    {
+      "name": "perCapita_600K",
+      "params": {
+        "initialFund": 30000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.955,
+      "medianRuinYear": 2084,
+      "avgFinalFund": 660688071077292.1
+    },
+    {
+      "name": "perCapita_750K",
+      "params": {
+        "initialFund": 37500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.975,
+      "medianRuinYear": 2082,
+      "avgFinalFund": 912737108167528.8
+    },
+    {
+      "name": "perCapita_1000K",
+      "params": {
+        "initialFund": 50000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.98,
+      "medianRuinYear": 2082,
+      "avgFinalFund": 1513365976923003
+    }
+  ],
+  "sustainableUBI": [
+    {
+      "name": "fund100K_ubi100",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 100,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.985,
+      "medianRuinYear": 2073,
+      "avgFinalFund": 120968599721654.86
+    },
+    {
+      "name": "fund100K_ubi200",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 200,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.9,
+      "medianRuinYear": 2079,
+      "avgFinalFund": 121346987242667.72
+    },
+    {
+      "name": "fund100K_ubi300",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 300,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.665,
+      "medianRuinYear": 2067,
+      "avgFinalFund": 63601746634399.54
+    },
+    {
+      "name": "fund100K_ubi500",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 500,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.245,
+      "medianRuinYear": 2060,
+      "avgFinalFund": 24220924159672.14
+    },
+    {
+      "name": "fund100K_ubi750",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 750,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.055,
+      "medianRuinYear": 2043,
+      "avgFinalFund": 3914484723554.264
+    },
+    {
+      "name": "fund100K_ubi1000",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.005,
+      "medianRuinYear": 2038,
+      "avgFinalFund": 312193948568.4618
+    },
+    {
+      "name": "fund150K_ubi100",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 100,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 233768165548459.56
+    },
+    {
+      "name": "fund150K_ubi200",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 200,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.975,
+      "medianRuinYear": 2075,
+      "avgFinalFund": 192353591442026.28
+    },
+    {
+      "name": "fund150K_ubi300",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 300,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.93,
+      "medianRuinYear": 2079,
+      "avgFinalFund": 188137145254368.16
+    },
+    {
+      "name": "fund150K_ubi500",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 500,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.635,
+      "medianRuinYear": 2067,
+      "avgFinalFund": 94802229940462.2
+    },
+    {
+      "name": "fund150K_ubi750",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 750,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.285,
+      "medianRuinYear": 2057,
+      "avgFinalFund": 38530238805220.21
+    },
+    {
+      "name": "fund150K_ubi1000",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.065,
+      "medianRuinYear": 2047,
+      "avgFinalFund": 11336031942673.713
+    },
+    {
+      "name": "fund200K_ubi100",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 100,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 374907327843504.4
+    },
+    {
+      "name": "fund200K_ubi200",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 200,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 303174789737416.5
+    },
+    {
+      "name": "fund200K_ubi300",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 300,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.945,
+      "medianRuinYear": 2089,
+      "avgFinalFund": 255906030943595.38
+    },
+    {
+      "name": "fund200K_ubi500",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 500,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.8,
+      "medianRuinYear": 2076,
+      "avgFinalFund": 154114027228588.6
+    },
+    {
+      "name": "fund200K_ubi750",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 750,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.45,
+      "medianRuinYear": 2064,
+      "avgFinalFund": 105117119548869.8
+    },
+    {
+      "name": "fund200K_ubi1000",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.24,
+      "medianRuinYear": 2055,
+      "avgFinalFund": 34206157003276.137
+    },
+    {
+      "name": "fund300K_ubi100",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 100,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 562738339587941.2
+    },
+    {
+      "name": "fund300K_ubi200",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 200,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 483740612875992.4
+    },
+    {
+      "name": "fund300K_ubi300",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 300,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 496777328931549.94
+    },
+    {
+      "name": "fund300K_ubi500",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 500,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.965,
+      "medianRuinYear": 2085,
+      "avgFinalFund": 391656902556043.7
+    },
+    {
+      "name": "fund300K_ubi750",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 750,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.815,
+      "medianRuinYear": 2068,
+      "avgFinalFund": 286558009700912.25
+    },
+    {
+      "name": "fund300K_ubi1000",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.605,
+      "medianRuinYear": 2066,
+      "avgFinalFund": 216165616365975.72
+    }
+  ],
+  "higherReturns": [
+    {
+      "name": "fund100K_ret6",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.015,
+      "medianRuinYear": 2039,
+      "avgFinalFund": 2721022190870.791
+    },
+    {
+      "name": "fund100K_ret7",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.02,
+      "medianRuinYear": 2040,
+      "avgFinalFund": 3218136120378.67
+    },
+    {
+      "name": "fund100K_ret8",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.08,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.07,
+      "medianRuinYear": 2042,
+      "avgFinalFund": 25623518366173.59
+    },
+    {
+      "name": "fund100K_ret9",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.09,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.215,
+      "medianRuinYear": 2044,
+      "avgFinalFund": 172832218003348.03
+    },
+    {
+      "name": "fund100K_ret10",
+      "params": {
+        "initialFund": 5000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.1,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.375,
+      "medianRuinYear": 2046,
+      "avgFinalFund": 723095000221076
+    },
+    {
+      "name": "fund150K_ret6",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.17,
+      "medianRuinYear": 2049,
+      "avgFinalFund": 33725279864814.14
+    },
+    {
+      "name": "fund150K_ret7",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.325,
+      "medianRuinYear": 2049,
+      "avgFinalFund": 139235880616905.19
+    },
+    {
+      "name": "fund150K_ret8",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.08,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.465,
+      "medianRuinYear": 2052,
+      "avgFinalFund": 276808534053823.88
+    },
+    {
+      "name": "fund150K_ret9",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.09,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.675,
+      "medianRuinYear": 2054,
+      "avgFinalFund": 1079465040386072.8
+    },
+    {
+      "name": "fund150K_ret10",
+      "params": {
+        "initialFund": 7500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.1,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.81,
+      "medianRuinYear": 2056,
+      "avgFinalFund": 2647886085859079
+    },
+    {
+      "name": "fund200K_ret6",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.405,
+      "medianRuinYear": 2056,
+      "avgFinalFund": 123692042696104.4
+    },
+    {
+      "name": "fund200K_ret7",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.645,
+      "medianRuinYear": 2058,
+      "avgFinalFund": 435337882295296.9
+    },
+    {
+      "name": "fund200K_ret8",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.08,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.77,
+      "medianRuinYear": 2058,
+      "avgFinalFund": 1281816307656502
+    },
+    {
+      "name": "fund200K_ret9",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.09,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.915,
+      "medianRuinYear": 2058,
+      "avgFinalFund": 2969632202718038.5
+    },
+    {
+      "name": "fund200K_ret10",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.1,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.975,
+      "medianRuinYear": 2068,
+      "avgFinalFund": 6743546251384795
+    }
+  ],
+  "lowVolHighRet": [
+    {
+      "name": "vol6_ret5",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.06
+      },
+      "successRate": 0.18,
+      "medianRuinYear": 2062,
+      "avgFinalFund": 9707684926401.873
+    },
+    {
+      "name": "vol6_ret6",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.06
+      },
+      "successRate": 0.59,
+      "medianRuinYear": 2074,
+      "avgFinalFund": 94443063849039.34
+    },
+    {
+      "name": "vol6_ret7",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.06
+      },
+      "successRate": 0.9,
+      "medianRuinYear": 2071,
+      "avgFinalFund": 387769540862719.75
+    },
+    {
+      "name": "vol6_ret8",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.08,
+        "returnVolatility": 0.06
+      },
+      "successRate": 0.97,
+      "medianRuinYear": 2078,
+      "avgFinalFund": 1131622087689533.8
+    },
+    {
+      "name": "vol8_ret5",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.08
+      },
+      "successRate": 0.22,
+      "medianRuinYear": 2064,
+      "avgFinalFund": 24398970625191.93
+    },
+    {
+      "name": "vol8_ret6",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.08
+      },
+      "successRate": 0.515,
+      "medianRuinYear": 2068,
+      "avgFinalFund": 97336516638220.78
+    },
+    {
+      "name": "vol8_ret7",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.08
+      },
+      "successRate": 0.805,
+      "medianRuinYear": 2067,
+      "avgFinalFund": 466230843542956.8
+    },
+    {
+      "name": "vol8_ret8",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.08,
+        "returnVolatility": 0.08
+      },
+      "successRate": 0.955,
+      "medianRuinYear": 2065,
+      "avgFinalFund": 1111412853325816.5
+    },
+    {
+      "name": "vol10_ret5",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.3,
+      "medianRuinYear": 2059,
+      "avgFinalFund": 42953447973161.53
+    },
+    {
+      "name": "vol10_ret6",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.46,
+      "medianRuinYear": 2064,
+      "avgFinalFund": 134823695235248.08
+    },
+    {
+      "name": "vol10_ret7",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.67,
+      "medianRuinYear": 2062,
+      "avgFinalFund": 399736500994576.75
+    },
+    {
+      "name": "vol10_ret8",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.08,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.865,
+      "medianRuinYear": 2065,
+      "avgFinalFund": 1098506125806347.2
+    },
+    {
+      "name": "vol12_ret5",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.27,
+      "medianRuinYear": 2055,
+      "avgFinalFund": 48442238492520.05
+    },
+    {
+      "name": "vol12_ret6",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.41,
+      "medianRuinYear": 2060,
+      "avgFinalFund": 181364566506649.25
+    },
+    {
+      "name": "vol12_ret7",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.61,
+      "medianRuinYear": 2056,
+      "avgFinalFund": 322975272481289.3
+    },
+    {
+      "name": "vol12_ret8",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.08,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.78,
+      "medianRuinYear": 2064,
+      "avgFinalFund": 1298760391196058.2
+    }
+  ],
+  "countryScenarios": [
+    {
+      "name": "norway_ubi250",
+      "params": {
+        "initialFund": 1400000000000,
+        "initialPopulation": 5500000,
+        "ubiMonthlyAmount": 250,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 42599447270129.72
+    },
+    {
+      "name": "norway_ubi500",
+      "params": {
+        "initialFund": 1400000000000,
+        "initialPopulation": 5500000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.975,
+      "medianRuinYear": 2077,
+      "avgFinalFund": 32672667078549.22
+    },
+    {
+      "name": "norway_ubi750",
+      "params": {
+        "initialFund": 1400000000000,
+        "initialPopulation": 5500000,
+        "ubiMonthlyAmount": 750,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.775,
+      "medianRuinYear": 2077,
+      "avgFinalFund": 16372605007922.842
+    },
+    {
+      "name": "norway_ubi1000",
+      "params": {
+        "initialFund": 1400000000000,
+        "initialPopulation": 5500000,
+        "ubiMonthlyAmount": 1000,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.545,
+      "medianRuinYear": 2067,
+      "avgFinalFund": 11626063154660.773
+    },
+    {
+      "name": "norway_ubi1500",
+      "params": {
+        "initialFund": 1400000000000,
+        "initialPopulation": 5500000,
+        "ubiMonthlyAmount": 1500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.12,
+      "medianRuinYear": 2051,
+      "avgFinalFund": 2324411371140.0605
+    },
+    {
+      "name": "norway_ubi2000",
+      "params": {
+        "initialFund": 1400000000000,
+        "initialPopulation": 5500000,
+        "ubiMonthlyAmount": 2000,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.02,
+      "medianRuinYear": 2044,
+      "avgFinalFund": 88164027278.36655
+    },
+    {
+      "name": "saudi_ubi100",
+      "params": {
+        "initialFund": 900000000000,
+        "initialPopulation": 35000000,
+        "ubiMonthlyAmount": 100,
+        "populationGrowthRate": 0.015,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.15
+      },
+      "successRate": 0.405,
+      "medianRuinYear": 2058,
+      "avgFinalFund": 14434585763954.238
+    },
+    {
+      "name": "saudi_ubi200",
+      "params": {
+        "initialFund": 900000000000,
+        "initialPopulation": 35000000,
+        "ubiMonthlyAmount": 200,
+        "populationGrowthRate": 0.015,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.15
+      },
+      "successRate": 0.035,
+      "medianRuinYear": 2043,
+      "avgFinalFund": 2322082457327.792
+    },
+    {
+      "name": "saudi_ubi300",
+      "params": {
+        "initialFund": 900000000000,
+        "initialPopulation": 35000000,
+        "ubiMonthlyAmount": 300,
+        "populationGrowthRate": 0.015,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.15
+      },
+      "successRate": 0,
+      "medianRuinYear": 2036,
+      "avgFinalFund": 0
+    },
+    {
+      "name": "saudi_ubi500",
+      "params": {
+        "initialFund": 900000000000,
+        "initialPopulation": 35000000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.015,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.15
+      },
+      "successRate": 0,
+      "medianRuinYear": 2031,
+      "avgFinalFund": 0
+    },
+    {
+      "name": "us_fund10T",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 330000000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0,
+      "medianRuinYear": 2032,
+      "avgFinalFund": 0
+    },
+    {
+      "name": "us_fund15T",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 330000000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0,
+      "medianRuinYear": 2037,
+      "avgFinalFund": 0
+    },
+    {
+      "name": "us_fund20T",
+      "params": {
+        "initialFund": 20000000000000,
+        "initialPopulation": 330000000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.015,
+      "medianRuinYear": 2041,
+      "avgFinalFund": 4905571172486.514
+    },
+    {
+      "name": "us_fund25T",
+      "params": {
+        "initialFund": 25000000000000,
+        "initialPopulation": 330000000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.06,
+      "medianRuinYear": 2047,
+      "avgFinalFund": 20453695607687.42
+    },
+    {
+      "name": "us_fund30T",
+      "params": {
+        "initialFund": 30000000000000,
+        "initialPopulation": 330000000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.19,
+      "medianRuinYear": 2051,
+      "avgFinalFund": 166595208408329.03
+    },
+    {
+      "name": "us_fund40T",
+      "params": {
+        "initialFund": 40000000000000,
+        "initialPopulation": 330000000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.43,
+      "medianRuinYear": 2064,
+      "avgFinalFund": 343313718293116.4
+    },
+    {
+      "name": "us_fund50T",
+      "params": {
+        "initialFund": 50000000000000,
+        "initialPopulation": 330000000,
+        "ubiMonthlyAmount": 500,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.59,
+      "medianRuinYear": 2067,
+      "avgFinalFund": 553919642375153.5
+    }
+  ],
+  "alaskaModel": [
+    {
+      "name": "alaska_Alaska__actual_",
+      "params": {
+        "initialFund": 80300000000,
+        "initialPopulation": 730000,
+        "ubiMonthlyAmount": 133,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 1,
+      "medianRuinYear": null,
+      "avgFinalFund": 2176698682164.5222
+    },
+    {
+      "name": "alaska_Wyoming_scale",
+      "params": {
+        "initialFund": 63800000000,
+        "initialPopulation": 580000,
+        "ubiMonthlyAmount": 133,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.99,
+      "medianRuinYear": 2072,
+      "avgFinalFund": 1878223223049.5159
+    },
+    {
+      "name": "alaska_Montana_scale",
+      "params": {
+        "initialFund": 121000000000,
+        "initialPopulation": 1100000,
+        "ubiMonthlyAmount": 133,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.98,
+      "medianRuinYear": 2091,
+      "avgFinalFund": 3260400242612.4736
+    },
+    {
+      "name": "alaska_Norway_scale__Alaska_model_",
+      "params": {
+        "initialFund": 605000000000,
+        "initialPopulation": 5500000,
+        "ubiMonthlyAmount": 133,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.995,
+      "medianRuinYear": 2089,
+      "avgFinalFund": 17389502146432.133
+    },
+    {
+      "name": "alaska_Small_nation__10M_",
+      "params": {
+        "initialFund": 1100000000000,
+        "initialPopulation": 10000000,
+        "ubiMonthlyAmount": 133,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.99,
+      "medianRuinYear": 2094,
+      "avgFinalFund": 28952507678000.773
+    },
+    {
+      "name": "alaska_Medium_nation__50M_",
+      "params": {
+        "initialFund": 5500000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 133,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.98,
+      "medianRuinYear": 2085,
+      "avgFinalFund": 153080362032965.1
+    },
+    {
+      "name": "alaska_Large_nation__100M_",
+      "params": {
+        "initialFund": 11000000000000,
+        "initialPopulation": 100000000,
+        "ubiMonthlyAmount": 133,
+        "populationGrowthRate": 0.005,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.985,
+      "medianRuinYear": 2079,
+      "avgFinalFund": 286822284492541.56
+    }
+  ],
+  "optimal": [
+    {
+      "name": "Conservative baseline ($200K/cap, $500/mo, 5% ret, 10% vol)",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 500,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.895,
+      "medianRuinYear": 2080,
+      "avgFinalFund": 175964824765261.3
+    },
+    {
+      "name": "High return ($200K/cap, $750/mo, 7% ret, 12% vol)",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 750,
+        "realReturnRate": 0.07,
+        "returnVolatility": 0.12
+      },
+      "successRate": 0.855,
+      "medianRuinYear": 2063,
+      "avgFinalFund": 616365064472619
+    },
+    {
+      "name": "Low volatility ($200K/cap, $750/mo, 5% ret, 8% vol)",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 750,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.08
+      },
+      "successRate": 0.685,
+      "medianRuinYear": 2073,
+      "avgFinalFund": 74848424527761.75
+    },
+    {
+      "name": "Large fund ($300K/cap, $1000/mo, 5% ret, 10% vol)",
+      "params": {
+        "initialFund": 15000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.655,
+      "medianRuinYear": 2069,
+      "avgFinalFund": 183980598419760.8
+    },
+    {
+      "name": "Maximum UBI ($500K/cap, $1500/mo, 6% ret, 10% vol)",
+      "params": {
+        "initialFund": 25000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1500,
+        "realReturnRate": 0.06,
+        "returnVolatility": 0.1
+      },
+      "successRate": 0.905,
+      "medianRuinYear": 2071,
+      "avgFinalFund": 979357301536293.2
+    },
+    {
+      "name": "Adult-only ($200K/cap, $1000/mo, 5% ret, 10% vol, 18+)",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1,
+        "eligibilityAge": 18
+      },
+      "successRate": 0.25,
+      "medianRuinYear": 2058,
+      "avgFinalFund": 31725749158938.6
+    },
+    {
+      "name": "Declining population ($200K/cap, $1000/mo, -0.5% growth)",
+      "params": {
+        "initialFund": 10000000000000,
+        "initialPopulation": 50000000,
+        "ubiMonthlyAmount": 1000,
+        "realReturnRate": 0.05,
+        "returnVolatility": 0.1,
+        "populationGrowthRate": -0.005
+      },
+      "successRate": 0.525,
+      "medianRuinYear": 2061,
+      "avgFinalFund": 65988782464453.44
+    }
+  ]
+}

@@ -17,6 +17,7 @@ import { DEFAULT_PARAMS } from './types';
 import type { SimulationResult } from './simulation';
 import type { SensitivityResult } from './useSensitivityAnalysis';
 import { SensitivityPanel } from './SensitivityPanel';
+import { Nav } from './Nav';
 import SimulationWorker from './simulation.worker?worker';
 import './App.css';
 
@@ -183,6 +184,7 @@ function App() {
 
   return (
     <div className="app">
+      <Nav currentPage="dynasty" />
       <header>
         <h1>Dynasty Fund Simulator</h1>
         <p>Model a perpetual fund that pays median U.S. income to a growing family lineage</p>

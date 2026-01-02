@@ -1,4 +1,5 @@
-/* Dynasty Fund Simulator Styles */
+/* UBI Sovereign Wealth Fund Simulator Styles */
+/* Based on App.css but with green color scheme */
 
 * {
   box-sizing: border-box;
@@ -14,7 +15,7 @@ body {
 }
 
 /* Site Navigation */
-.site-nav {
+.ubi-app .site-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,7 +24,7 @@ body {
   border-bottom: 1px solid #1a1f2e;
 }
 
-.nav-brand {
+.ubi-app .nav-brand {
   font-size: 0.85rem;
   font-weight: 600;
   color: #6b7280;
@@ -31,12 +32,12 @@ body {
   letter-spacing: 0.05em;
 }
 
-.nav-links {
+.ubi-app .nav-links {
   display: flex;
   gap: 0.5rem;
 }
 
-.nav-link {
+.ubi-app .nav-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -49,57 +50,57 @@ body {
   transition: all 0.2s;
 }
 
-.nav-link:hover {
+.ubi-app .nav-link:hover {
   color: #e7e9ea;
   background: rgba(255, 255, 255, 0.05);
 }
 
-.nav-link.active {
-  color: #60a5fa;
-  background: rgba(96, 165, 250, 0.1);
+.ubi-app .nav-link.active {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
 }
 
-.nav-icon {
+.ubi-app .nav-icon {
   font-size: 1rem;
 }
 
-.app {
+.app.ubi-app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-header {
-  background: linear-gradient(135deg, #1a1f2e 0%, #2d3748 100%);
+.ubi-app header {
+  background: linear-gradient(135deg, #1a2e1f 0%, #2d4837 100%);
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid #2d3748;
+  border-bottom: 1px solid #2d4837;
   text-align: center;
 }
 
-header h1 {
+.ubi-app header h1 {
   margin: 0 0 0.5rem 0;
   font-size: 1.75rem;
   font-weight: 600;
-  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-header p {
+.ubi-app header p {
   margin: 0;
   color: #9ca3af;
   font-size: 0.95rem;
 }
 
-.main-content {
+.ubi-app .main-content {
   display: flex;
   flex: 1;
   overflow: hidden;
 }
 
 /* Controls Sidebar */
-.controls {
+.ubi-app .controls {
   width: 320px;
   min-width: 320px;
   background: #1a1f2e;
@@ -108,50 +109,72 @@ header p {
   border-right: 1px solid #2d3748;
 }
 
-.controls h2 {
+.ubi-app .controls h2 {
   margin: 0 0 1.5rem 0;
   font-size: 1.25rem;
   color: #e7e9ea;
 }
 
-.controls section {
+.ubi-app .controls section {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #2d3748;
 }
 
-.controls section:last-of-type {
+.ubi-app .controls section:last-of-type {
   border-bottom: none;
 }
 
-.controls h3 {
+.ubi-app .controls h3 {
   margin: 0 0 1rem 0;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #60a5fa;
+  color: #10b981;
 }
 
-/* Parameter Slider - base margin is set below with other interactive styles */
+/* Parameter Slider */
+.ubi-app .parameter-slider {
+  cursor: pointer;
+  padding: 0.75rem;
+  margin: -0.75rem;
+  margin-bottom: 0.25rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
 
-.parameter-slider label {
+.ubi-app .parameter-slider:hover:not(.selected) {
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.ubi-app .parameter-slider.selected {
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin: -0.75rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.ubi-app .parameter-slider label {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
 }
 
-.param-label {
+.ubi-app .param-label {
   color: #e7e9ea;
 }
 
-.param-value {
-  color: #60a5fa;
+.ubi-app .param-value {
+  color: #10b981;
   font-weight: 500;
   font-family: 'SF Mono', Monaco, monospace;
 }
 
-.parameter-slider input[type='range'] {
+.ubi-app .parameter-slider input[type='range'] {
   width: 100%;
   height: 6px;
   border-radius: 3px;
@@ -160,22 +183,22 @@ header p {
   -webkit-appearance: none;
 }
 
-.parameter-slider input[type='range']::-webkit-slider-thumb {
+.ubi-app .parameter-slider input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #60a5fa;
+  background: #10b981;
   cursor: pointer;
   transition: background 0.2s;
 }
 
-.parameter-slider input[type='range']::-webkit-slider-thumb:hover {
-  background: #3b82f6;
+.ubi-app .parameter-slider input[type='range']::-webkit-slider-thumb:hover {
+  background: #059669;
 }
 
 /* Running Indicator */
-.running-indicator {
+.ubi-app .running-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,18 +206,18 @@ header p {
   padding: 1rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #60a5fa;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
-  border: 2px solid #60a5fa;
+  color: #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(52, 211, 153, 0.2) 100%);
+  border: 2px solid #10b981;
   border-radius: 8px;
   margin-top: 1rem;
 }
 
-.spinner {
+.ubi-app .spinner {
   width: 20px;
   height: 20px;
-  border: 3px solid rgba(96, 165, 250, 0.3);
-  border-top-color: #60a5fa;
+  border: 3px solid rgba(16, 185, 129, 0.3);
+  border-top-color: #10b981;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -204,66 +227,66 @@ header p {
 }
 
 /* Results Area */
-.results {
+.ubi-app .results {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
 }
 
-.placeholder {
+.ubi-app .placeholder {
   max-width: 600px;
   margin: 4rem auto;
   text-align: center;
 }
 
-.placeholder h2 {
+.ubi-app .placeholder h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.placeholder p {
+.ubi-app .placeholder p {
   color: #9ca3af;
   margin-bottom: 2rem;
 }
 
-.concept-explanation {
+.ubi-app .concept-explanation {
   background: #1a1f2e;
   border-radius: 12px;
   padding: 1.5rem;
   text-align: left;
 }
 
-.concept-explanation h3 {
-  color: #60a5fa;
+.ubi-app .concept-explanation h3 {
+  color: #10b981;
   margin: 0 0 1rem 0;
 }
 
-.concept-explanation ul {
+.ubi-app .concept-explanation ul {
   margin: 0;
   padding-left: 1.5rem;
 }
 
-.concept-explanation li {
+.ubi-app .concept-explanation li {
   margin-bottom: 0.5rem;
   color: #9ca3af;
 }
 
 /* Metrics Grid */
-.metrics-grid {
+.ubi-app .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.metric-card {
+.ubi-app .metric-card {
   background: #1a1f2e;
   border-radius: 12px;
   padding: 1.25rem;
   text-align: center;
 }
 
-.metric-card h3 {
+.ubi-app .metric-card h3 {
   margin: 0 0 0.5rem 0;
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -271,29 +294,29 @@ header p {
   color: #9ca3af;
 }
 
-.metric-value {
-  font-size: 1.75rem;
+.ubi-app .metric-value {
+  font-size: 1.5rem;
   font-weight: 700;
   font-family: 'SF Mono', Monaco, monospace;
   color: #e7e9ea;
 }
 
-.metric-value.success {
+.ubi-app .metric-value.success {
   color: #4ade80;
 }
 
-.metric-value.warning {
+.ubi-app .metric-value.warning {
   color: #fbbf24;
 }
 
-.metric-card p {
+.ubi-app .metric-card p {
   margin: 0.5rem 0 0 0;
   font-size: 0.8rem;
   color: #6b7280;
 }
 
 /* Charts */
-.chart-container {
+.ubi-app .chart-container {
   background: #1a1f2e;
   border-radius: 12px;
   padding: 1.5rem;
@@ -301,7 +324,7 @@ header p {
   position: relative;
 }
 
-.chart-container.loading::after {
+.ubi-app .chart-container.loading::after {
   content: '';
   position: absolute;
   top: 0;
@@ -313,7 +336,7 @@ header p {
   pointer-events: none;
 }
 
-.chart-loading-indicator {
+.ubi-app .chart-loading-indicator {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -322,212 +345,188 @@ header p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #60a5fa;
+  color: #10b981;
   font-weight: 500;
 }
 
-.chart-loading-indicator .spinner {
+.ubi-app .chart-loading-indicator .spinner {
   width: 16px;
   height: 16px;
 }
 
-.chart-container h3 {
+.ubi-app .chart-container h3 {
   margin: 0 0 1rem 0;
   font-size: 1rem;
   color: #e7e9ea;
 }
 
 /* Toggle Section */
-.toggle-section {
+.ubi-app .toggle-section {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
-.toggle-button {
+.ubi-app .toggle-button {
   padding: 0.75rem 1.5rem;
   font-size: 0.9rem;
-  color: #60a5fa;
+  color: #10b981;
   background: transparent;
-  border: 1px solid #60a5fa;
+  border: 1px solid #10b981;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.toggle-button:hover,
-.toggle-button.active {
-  background: rgba(96, 165, 250, 0.1);
+.ubi-app .toggle-button:hover,
+.ubi-app .toggle-button.active {
+  background: rgba(16, 185, 129, 0.1);
 }
 
 /* Single Run Stats */
-.single-run-stats {
+.ubi-app .single-run-stats {
   background: #1a1f2e;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.single-run-stats h3 {
+.ubi-app .single-run-stats h3 {
   margin: 0 0 1rem 0;
   font-size: 1rem;
   color: #e7e9ea;
 }
 
-.stats-grid {
+.ubi-app .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
 }
 
-.stat {
+.ubi-app .stat {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.stat-label {
+.ubi-app .stat-label {
   font-size: 0.8rem;
   color: #9ca3af;
 }
 
-.stat-value {
+.ubi-app .stat-value {
   font-size: 1.25rem;
   font-weight: 600;
   font-family: 'SF Mono', Monaco, monospace;
-  color: #60a5fa;
+  color: #10b981;
 }
 
 /* Analysis Section */
-.analysis-section {
+.ubi-app .analysis-section {
   background: #1a1f2e;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.analysis-section h3 {
+.ubi-app .analysis-section h3 {
   margin: 0 0 1rem 0;
   font-size: 1rem;
   color: #e7e9ea;
 }
 
-.analysis-content {
+.ubi-app .analysis-content {
   color: #9ca3af;
   line-height: 1.6;
 }
 
-.analysis-content p {
+.ubi-app .analysis-content p {
   margin: 0 0 1rem 0;
 }
 
-.analysis-content p:last-child {
+.ubi-app .analysis-content p:last-child {
   margin-bottom: 0;
 }
 
-.analysis-content strong {
+.ubi-app .analysis-content strong {
   color: #e7e9ea;
 }
 
 /* Footer */
-footer {
+.ubi-app footer {
   background: #1a1f2e;
   padding: 1.5rem 2rem;
   text-align: center;
   border-top: 1px solid #2d3748;
 }
 
-footer p {
+.ubi-app footer p {
   margin: 0;
   font-size: 0.9rem;
   color: #9ca3af;
 }
 
-footer .disclaimer {
+.ubi-app footer .disclaimer {
   margin-top: 0.5rem;
   font-size: 0.8rem;
   color: #6b7280;
 }
 
 /* Recharts Customization */
-.recharts-cartesian-grid-horizontal line,
-.recharts-cartesian-grid-vertical line {
+.ubi-app .recharts-cartesian-grid-horizontal line,
+.ubi-app .recharts-cartesian-grid-vertical line {
   stroke: #2d3748;
 }
 
-.recharts-text {
+.ubi-app .recharts-text {
   fill: #9ca3af;
   font-size: 0.75rem;
 }
 
-.recharts-legend-item-text {
+.ubi-app .recharts-legend-item-text {
   color: #9ca3af !important;
 }
 
-.recharts-tooltip-wrapper {
+.ubi-app .recharts-tooltip-wrapper {
   outline: none;
 }
 
-.recharts-default-tooltip {
+.ubi-app .recharts-default-tooltip {
   background: #1a1f2e !important;
   border: 1px solid #2d3748 !important;
   border-radius: 8px !important;
 }
 
-.recharts-tooltip-label {
+.ubi-app .recharts-tooltip-label {
   color: #e7e9ea !important;
 }
 
-.recharts-tooltip-item {
+.ubi-app .recharts-tooltip-item {
   color: #9ca3af !important;
 }
 
-/* Selected Parameter Slider */
-.parameter-slider.selected {
-  background: rgba(96, 165, 250, 0.1);
-  border-radius: 8px;
-  padding: 0.75rem;
-  margin: -0.75rem;
-  margin-bottom: 0.25rem;
-  border: 1px solid rgba(96, 165, 250, 0.3);
-}
-
-.parameter-slider {
-  cursor: pointer;
-  padding: 0.75rem;
-  margin: -0.75rem;
-  margin-bottom: 0.25rem;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.parameter-slider:hover:not(.selected) {
-  background: rgba(96, 165, 250, 0.05);
-}
-
 /* Sensitivity Panel */
-.sensitivity-panel {
+.ubi-app .sensitivity-panel {
   background: #1a1f2e;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(96, 165, 250, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-.sensitivity-header {
+.ubi-app .sensitivity-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
 }
 
-.sensitivity-header h3 {
+.ubi-app .sensitivity-header h3 {
   margin: 0;
   font-size: 1rem;
-  color: #60a5fa;
+  color: #10b981;
 }
 
-.sensitivity-header .close-button {
+.ubi-app .sensitivity-header .close-button {
   background: transparent;
   border: none;
   color: #9ca3af;
@@ -538,36 +537,36 @@ footer .disclaimer {
   transition: color 0.2s;
 }
 
-.sensitivity-header .close-button:hover {
+.ubi-app .sensitivity-header .close-button:hover {
   color: #e7e9ea;
 }
 
-.sensitivity-description {
+.ubi-app .sensitivity-description {
   margin: 0 0 1rem 0;
   font-size: 0.85rem;
   color: #9ca3af;
 }
 
-.sensitivity-chart {
+.ubi-app .sensitivity-chart {
   margin-bottom: 1rem;
 }
 
-.sensitivity-insight {
+.ubi-app .sensitivity-insight {
   font-size: 0.9rem;
   color: #9ca3af;
   padding: 0.75rem;
-  background: rgba(96, 165, 250, 0.05);
+  background: rgba(16, 185, 129, 0.05);
   border-radius: 6px;
-  border-left: 3px solid #60a5fa;
+  border-left: 3px solid #10b981;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .main-content {
+  .ubi-app .main-content {
     flex-direction: column;
   }
 
-  .controls {
+  .ubi-app .controls {
     width: 100%;
     min-width: unset;
     border-right: none;
@@ -576,19 +575,19 @@ footer .disclaimer {
 }
 
 @media (max-width: 600px) {
-  .controls {
+  .ubi-app .controls {
     padding: 1rem;
   }
 
-  .results {
+  .ubi-app .results {
     padding: 1rem;
   }
 
-  .metrics-grid {
+  .ubi-app .metrics-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .metric-value {
+  .ubi-app .metric-value {
     font-size: 1.25rem;
   }
 }
